@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
-<!-- Active URL: https://sql.toad.cz/? -->
+<!-- Active URL: https://sql.toad.cz/ -->
 <sql>
 <datatypes db="mysql">
 	<group label="Numeric" color="rgb(238,238,170)">
@@ -284,7 +284,7 @@
 <part>Image_ID </part>
 </key>
 </table>
-<table x="102" y="802" name="member">
+<table x="290" y="737" name="member">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(5)</datatype>
 </row>
@@ -320,6 +320,22 @@
 <default>1</default></row>
 <row name="User_image" null="0" autoincrement="0">
 <datatype>VARCHAR(255)</datatype>
+</row>
+<row name="adress" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>NULL</default><comment>new</comment>
+</row>
+<row name="user_level" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><comment>new</comment>
+</row>
+<row name="user_coupon_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><comment>new</comment>
+</row>
+<row name="user_product" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><comment>new</comment>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -554,7 +570,7 @@
 <table x="502" y="1681" name="speaker_li">
 <row name="id" null="1" autoincrement="0">
 <datatype>INTEGER(10)</datatype>
-</row>
+<default>NULL</default></row>
 <row name="contents" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 </row>
