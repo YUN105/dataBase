@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
-<!-- Active URL: https://sql.toad.cz/? -->
+<!-- Active URL: https://sql.toad.cz/ -->
 <sql>
 <datatypes db="mysql">
 	<group label="Numeric" color="rgb(238,238,170)">
@@ -321,6 +321,9 @@
 <row name="User_image" null="0" autoincrement="0">
 <datatype>VARCHAR(255)</datatype>
 </row>
+<row name="new_F_ register_id" null="0" autoincrement="0">
+<datatype>INTEGER(10)</datatype>
+</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
@@ -554,7 +557,7 @@
 <table x="502" y="1681" name="speaker_li">
 <row name="id" null="1" autoincrement="0">
 <datatype>INTEGER(10)</datatype>
-</row>
+<default>NULL</default></row>
 <row name="contents" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 </row>
@@ -568,5 +571,103 @@
 <part>id</part>
 </key>
 <comment>new</comment>
+</table>
+<table x="502" y="801" name="new_login">
+<row name="id" null="0" autoincrement="1">
+<datatype>INTEGER(10)</datatype>
+</row>
+<row name="User_name" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="Password" null="0" autoincrement="0">
+<datatype>VARCHAR(55)</datatype>
+</row>
+<row name="Last_Login_Time" null="0" autoincrement="0">
+<datatype>DATETIME</datatype>
+</row>
+<row name="Login_Attempts" null="0" autoincrement="0">
+<datatype>INTEGER(5)</datatype>
+</row>
+<row name="valid" null="0" autoincrement="0">
+<datatype>TINYINT(2)</datatype>
+<default>1</default></row>
+<row name="Create_date" null="0" autoincrement="0">
+<datatype>DATE</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="302" y="802" name="new_register">
+<row name="id" null="0" autoincrement="1">
+<datatype>INTEGER(10)</datatype>
+</row>
+<row name="User_name" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="Email" null="0" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+</row>
+<row name="Phone" null="0" autoincrement="0">
+<datatype>VARCHAR(255)</datatype>
+</row>
+<row name="Gender" null="0" autoincrement="0">
+<datatype>ENUM('M', 'F', 'Other')</datatype>
+</row>
+<row name="date_of_birth" null="0" autoincrement="0">
+<datatype>DATE</datatype>
+</row>
+<row name="Password" null="0" autoincrement="0">
+<datatype>VARCHAR(55)</datatype>
+</row>
+<row name="valid" null="0" autoincrement="0">
+<datatype>TINYINT(2)</datatype>
+<default>1</default></row>
+<row name="Create_date" null="0" autoincrement="0">
+<datatype>DATE</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="702" y="801" name="new_Discounted_Products">
+<row name="id" null="0" autoincrement="1">
+<datatype>INTEGER(10)</datatype>
+</row>
+<row name="F_product_id" null="0" autoincrement="0">
+<datatype>INTEGER(10)</datatype>
+</row>
+<row name="Discount_type" null="0" autoincrement="0">
+<datatype>ENUM('百分比', '金額')</datatype>
+</row>
+<row name="Valid_start_date" null="0" autoincrement="0">
+<datatype>DATE</datatype>
+</row>
+<row name="Valid_end_date" null="0" autoincrement="0">
+<datatype>DATE</datatype>
+</row>
+<row name="valid" null="0" autoincrement="0">
+<datatype>TINYINT(2)</datatype>
+<default>1</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="1000" y="799" name="new_Discounted_categories">
+<row name="Discounted_cate_id" null="0" autoincrement="1">
+<datatype>INTEGER(10)</datatype>
+</row>
+<row name="Discounted_cate_name" null="0" autoincrement="0">
+<datatype>VARCHAR(255)</datatype>
+</row>
+<row name="P_Description" null="0" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+</row>
+<row name="valid" null="0" autoincrement="0">
+<datatype>TINYINT(2)</datatype>
+<default>1</default></row>
+<key type="PRIMARY" name="">
+<part>Discounted_cate_id</part>
+</key>
 </table>
 </sql>
