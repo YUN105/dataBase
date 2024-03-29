@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
-<!-- Active URL: https://sql.toad.cz/? -->
+<!-- Active URL: https://sql.toad.cz/ -->
 <sql>
 <datatypes db="mysql">
 	<group label="Numeric" color="rgb(238,238,170)">
@@ -411,7 +411,7 @@
 <part>Like_ID</part>
 </key>
 </table>
-<table x="102" y="1452" name="recipe">
+<table x="105" y="1418" name="recipe">
 <row name="Recipe_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -436,6 +436,30 @@
 <row name="recipe_speaker_id" null="0" autoincrement="0">
 <datatype>INTEGER(10)</datatype>
 <comment>new</comment>
+</row>
+<row name="servings" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><comment>該食譜為幾人份</comment>
+</row>
+<row name="ingredient_quantity" null="1" autoincrement="0">
+<datatype>SMALLINT</datatype>
+<default>NULL</default><comment>共需幾樣食材</comment>
+</row>
+<row name="cook_time" null="1" autoincrement="0">
+<datatype>INT</datatype>
+<default>NULL</default><comment>料理時長</comment>
+</row>
+<row name="ingredients" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default><comment>需要的食材</comment>
+</row>
+<row name="portion" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><comment>食材所需份量</comment>
+</row>
+<row name="related_products" null="1" autoincrement="0">
+<datatype>INT</datatype>
+<default>NULL</default><comment>與此食譜相關的食材id</comment>
 </row>
 <key type="PRIMARY" name="">
 <part>Recipe_ID</part>
@@ -495,7 +519,7 @@
 <part>Like_ID</part>
 </key>
 </table>
-<table x="103" y="1704" name="speaker">
+<table x="114" y="1804" name="speaker">
 <row name="Speaker_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -533,7 +557,7 @@
 </key>
 <comment>new</comment>
 </table>
-<table x="303" y="1682" name="speaker_exp">
+<table x="314" y="1782" name="speaker_exp">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -551,10 +575,10 @@
 </key>
 <comment>new</comment>
 </table>
-<table x="502" y="1681" name="speaker_li">
+<table x="513" y="1781" name="speaker_li">
 <row name="id" null="1" autoincrement="0">
 <datatype>INTEGER(10)</datatype>
-</row>
+<default>NULL</default></row>
 <row name="contents" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 </row>
