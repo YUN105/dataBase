@@ -284,7 +284,7 @@
 <part>Image_ID </part>
 </key>
 </table>
-<table x="102" y="802" name="member">
+<table x="290" y="737" name="member">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(5)</datatype>
 </row>
@@ -323,6 +323,22 @@
 </row>
 <row name="new_F_ register_id" null="0" autoincrement="0">
 <datatype>INTEGER(10)</datatype>
+</row>
+<row name="adress" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>NULL</default><comment>new</comment>
+</row>
+<row name="user_level" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><comment>new</comment>
+</row>
+<row name="user_coupon_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><comment>new</comment>
+</row>
+<row name="user_product" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><comment>new</comment>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
