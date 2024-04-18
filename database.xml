@@ -430,7 +430,7 @@
 <part>Like_ID</part>
 </key>
 </table>
-<table x="105" y="1418" name="recipe">
+<table x="102" y="1452" name="recipe">
 <row name="Recipe_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -455,30 +455,6 @@
 <row name="recipe_speaker_id" null="0" autoincrement="0">
 <datatype>INTEGER(10)</datatype>
 <comment>new</comment>
-</row>
-<row name="servings" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default><comment>該食譜為幾人份</comment>
-</row>
-<row name="ingredient_quantity" null="1" autoincrement="0">
-<datatype>SMALLINT</datatype>
-<default>NULL</default><comment>共需幾樣食材</comment>
-</row>
-<row name="cook_time" null="1" autoincrement="0">
-<datatype>INT</datatype>
-<default>NULL</default><comment>料理時長</comment>
-</row>
-<row name="ingredients" null="1" autoincrement="0">
-<datatype>CHAR</datatype>
-<default>NULL</default><comment>需要的食材</comment>
-</row>
-<row name="portion" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default><comment>食材所需份量</comment>
-</row>
-<row name="related_products" null="1" autoincrement="0">
-<datatype>INT</datatype>
-<default>NULL</default><comment>與此食譜相關的食材id</comment>
 </row>
 <key type="PRIMARY" name="">
 <part>Recipe_ID</part>
@@ -538,7 +514,7 @@
 <part>Like_ID</part>
 </key>
 </table>
-<table x="114" y="1804" name="speaker">
+<table x="103" y="1704" name="speaker">
 <row name="Speaker_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -576,7 +552,7 @@
 </key>
 <comment>new</comment>
 </table>
-<table x="314" y="1782" name="speaker_exp">
+<table x="303" y="1682" name="speaker_exp">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -594,7 +570,7 @@
 </key>
 <comment>new</comment>
 </table>
-<table x="513" y="1781" name="speaker_li">
+<table x="502" y="1681" name="speaker_li">
 <row name="id" null="1" autoincrement="0">
 <datatype>INTEGER(10)</datatype>
 <default>NULL</default></row>
@@ -638,7 +614,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="302" y="802" name="new_register">
+<table x="1184" y="484" name="new_register">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -709,5 +685,73 @@
 <key type="PRIMARY" name="">
 <part>Discounted_cate_id</part>
 </key>
+</table>
+<table x="1029" y="1175" name="new_order">
+<row name="Order_ID" null="0" autoincrement="1">
+<datatype>INTEGER(10)</datatype>
+<default>NULL</default></row>
+<row name="Customer_ID" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Order_date" null="0" autoincrement="1">
+<datatype>DATETIME</datatype>
+<default>'NULL'</default><comment>訂單日期</comment>
+</row>
+<row name="Total_amount" null="0" autoincrement="1">
+<datatype>DECIMAL(10,2)</datatype>
+<default>NULL</default><comment>總金額</comment>
+</row>
+<row name="status" null="0" autoincrement="1">
+<datatype>VARCHAR(50)</datatype>
+<default>'NULL'</default></row>
+<row name="Shipping_address" null="0" autoincrement="1">
+<datatype>VARCHAR(255)</datatype>
+<default>'NULL'</default></row>
+<row name="Payment_method " null="0" autoincrement="1">
+<datatype>VARCHAR(50)</datatype>
+<default>'NULL'</default></row>
+<row name="Shipping_date" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default></row>
+<row name="Completed_date" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default></row>
+<row name="product_id" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="class_id" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Coupon_ID" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>Order_ID</part>
+</key>
+<comment>訂單資料表</comment>
+</table>
+<table x="1219" y="1226" name="new_Order_Detail">
+<row name="Order_Item_ID" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Order_ID" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="product_id" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Quantity" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Unit_price" null="0" autoincrement="1">
+<datatype>DECIMAL</datatype>
+<default>NULL</default></row>
+<row name="Total_item_price" null="1" autoincrement="0">
+<datatype>DECIMAL</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>Order_Item_ID</part>
+</key>
+<comment>訂單明細資料表</comment>
 </table>
 </sql>
