@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="101" y="52" name="buy">
+</datatypes><table x="10" y="10" name="buy">
 <row name="Order_id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -57,7 +57,7 @@
 <part>Order_id</part>
 </key>
 </table>
-<table x="302" y="52" name="buy_item">
+<table x="155" y="10" name="buy_item">
 <row name="Order_Item_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -77,7 +77,7 @@
 <part>Order_Item_ID</part>
 </key>
 </table>
-<table x="101" y="222" name="class">
+<table x="297" y="10" name="class">
 <row name="Class_ID" null="0" autoincrement="1">
 <datatype>INTEGER(5)</datatype>
 </row>
@@ -121,7 +121,7 @@
 <part>Class_ID</part>
 </key>
 </table>
-<table x="301" y="223" name="class_categories">
+<table x="449" y="10" name="class_categories">
 <row name="Class_cate_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -138,7 +138,7 @@
 <part>Class_cate_ID</part>
 </key>
 </table>
-<table x="501" y="223" name="class_image">
+<table x="632" y="10" name="class_image">
 <row name="Image_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -161,7 +161,7 @@
 <part>Image_ID</part>
 </key>
 </table>
-<table x="682" y="221" name="class_like">
+<table x="790" y="10" name="class_like">
 <row name="Like_ID" null="0" autoincrement="1">
 <datatype>INTEGER(11)</datatype>
 </row>
@@ -175,7 +175,7 @@
 <part>Like_ID</part>
 </key>
 </table>
-<table x="1041" y="221" name="coupons">
+<table x="931" y="10" name="coupons">
 <row name="Coupon_ID " null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -213,7 +213,7 @@
 <part>Coupon_ID </part>
 </key>
 </table>
-<table x="1212" y="221" name="coupon_categories">
+<table x="10" y="355" name="coupon_categories">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(11)</datatype>
 </row>
@@ -227,7 +227,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="102" y="602" name="event">
+<table x="207" y="355" name="event">
 <row name="Event_ID " null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -247,7 +247,7 @@
 <part>Event_ID </part>
 </key>
 </table>
-<table x="301" y="602" name="Event_categories">
+<table x="361" y="355" name="Event_categories">
 <row name="Event_cate_ID " null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -261,7 +261,7 @@
 <part>Event_cate_ID </part>
 </key>
 </table>
-<table x="502" y="602" name="event_image">
+<table x="548" y="314" name="event_image">
 <row name="Image_ID " null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -284,7 +284,7 @@
 <part>Image_ID </part>
 </key>
 </table>
-<table x="290" y="737" name="member">
+<table x="715" y="307" name="member">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(5)</datatype>
 </row>
@@ -344,7 +344,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="102" y="1152" name="product">
+<table x="20" y="746" name="product">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -360,6 +360,13 @@
 <row name="price" null="0" autoincrement="0">
 <datatype>INTEGER(10)</datatype>
 </row>
+<row name="rating" null="1" autoincrement="0">
+<datatype>INTEGER(5)</datatype>
+<default>NULL</default></row>
+<row name="origin-price" null="1" autoincrement="0">
+<datatype>INTEGER(5)</datatype>
+<default>NULL</default><comment>comment</comment>
+</row>
 <row name="stock_quantity" null="0" autoincrement="0">
 <datatype>INTEGER(5)</datatype>
 </row>
@@ -372,20 +379,29 @@
 <row name="valid" null="0" autoincrement="0">
 <datatype>TINYINT(2)</datatype>
 <default>1</default></row>
+<row name="ratinf" null="1" autoincrement="0">
+<datatype>INTEGER(5)</datatype>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="302" y="1151" name="product_categories">
+<table x="170" y="764" name="product_categories">
 <row name="Product_cate_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
+<row name="parent_id" null="1" autoincrement="0">
+<datatype>INTEGER(5)</datatype>
+<default>NULL</default></row>
 <row name="Product_cate_name" null="0" autoincrement="0">
 <datatype>VARCHAR(255)</datatype>
 </row>
 <row name="P_Description" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 </row>
+<row name="png" null="1" autoincrement="0">
+<datatype>CHAR(10)</datatype>
+<default>NULL</default></row>
 <row name="valid" null="0" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>1</default></row>
@@ -393,7 +409,7 @@
 <part>Product_cate_ID</part>
 </key>
 </table>
-<table x="512" y="1152" name="product_image">
+<table x="384" y="769" name="product_image">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -416,7 +432,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="701" y="1151" name="product_like">
+<table x="577" y="773" name="product_like">
 <row name="Like_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -430,7 +446,7 @@
 <part>Like_ID</part>
 </key>
 </table>
-<table x="102" y="1452" name="recipe">
+<table x="1049" y="387" name="recipe">
 <row name="Recipe_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -460,7 +476,7 @@
 <part>Recipe_ID</part>
 </key>
 </table>
-<table x="301" y="1452" name="recipe_categories">
+<table x="1224" y="390" name="recipe_categories">
 <row name="Recipe_cate_ID" null="0" autoincrement="1">
 <datatype>INTEGER(5)</datatype>
 </row>
@@ -477,7 +493,7 @@
 <part>Recipe_cate_ID</part>
 </key>
 </table>
-<table x="501" y="1452" name="recipe_image">
+<table x="1424" y="389" name="recipe_image">
 <row name="Image_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -500,7 +516,7 @@
 <part>Image_ID</part>
 </key>
 </table>
-<table x="702" y="1451" name="recipe_like">
+<table x="5" y="1095" name="recipe_like">
 <row name="Like_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -514,7 +530,7 @@
 <part>Like_ID</part>
 </key>
 </table>
-<table x="103" y="1704" name="speaker">
+<table x="196" y="1080" name="speaker">
 <row name="Speaker_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -534,7 +550,7 @@
 <part>Speaker_ID</part>
 </key>
 </table>
-<table x="853" y="202" name="class_content">
+<table x="357" y="1080" name="class_content">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -552,7 +568,7 @@
 </key>
 <comment>new</comment>
 </table>
-<table x="303" y="1682" name="speaker_exp">
+<table x="523" y="1080" name="speaker_exp">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -570,7 +586,7 @@
 </key>
 <comment>new</comment>
 </table>
-<table x="502" y="1681" name="speaker_li">
+<table x="684" y="1080" name="speaker_li">
 <row name="id" null="1" autoincrement="0">
 <datatype>INTEGER(10)</datatype>
 <default>NULL</default></row>
@@ -588,7 +604,7 @@
 </key>
 <comment>new</comment>
 </table>
-<table x="502" y="801" name="new_login">
+<table x="829" y="1080" name="new_login">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -614,7 +630,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1184" y="484" name="new_register">
+<table x="974" y="1080" name="new_register">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -646,7 +662,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="702" y="801" name="new_Discounted_Products">
+<table x="10" y="1276" name="new_Discounted_Products">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -669,7 +685,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1000" y="799" name="new_Discounted_categories">
+<table x="253" y="1276" name="new_Discounted_categories">
 <row name="Discounted_cate_id" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 </row>
@@ -686,7 +702,7 @@
 <part>Discounted_cate_id</part>
 </key>
 </table>
-<table x="1029" y="1175" name="new_order">
+<table x="505" y="1276" name="new_order">
 <row name="Order_ID" null="0" autoincrement="1">
 <datatype>INTEGER(10)</datatype>
 <default>NULL</default></row>
@@ -730,7 +746,7 @@
 </key>
 <comment>訂單資料表</comment>
 </table>
-<table x="1219" y="1226" name="new_Order_Detail">
+<table x="660" y="1276" name="new_Order_Detail">
 <row name="Order_Item_ID" null="0" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -753,5 +769,28 @@
 <part>Order_Item_ID</part>
 </key>
 <comment>訂單明細資料表</comment>
+</table>
+<table x="742" y="767" name="product_reviews">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="product_ID" null="1" autoincrement="0">
+<datatype>INTEGER(5)</datatype>
+<default>NULL</default></row>
+<row name="user_ID" null="1" autoincrement="0">
+<datatype>INTEGER(5)</datatype>
+<default>NULL</default></row>
+<row name="rating" null="1" autoincrement="0">
+<datatype>INTEGER(5)</datatype>
+<default>NULL</default></row>
+<row name="comment" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>NULL</default></row>
+<row name="created_at" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
 </table>
 </sql>
